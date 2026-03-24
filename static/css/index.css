@@ -112,6 +112,16 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.teaser-gif {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
 
 /* Publication Content Styling */
 .publication-title {

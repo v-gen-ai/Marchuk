@@ -1,63 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Mathedemo</title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
-
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
   
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
@@ -186,53 +140,7 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
+
 
   <main id="main-content">
   <section class="hero">
@@ -241,52 +149,44 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Marchuk: Efficient Global Weather Forecasting from Mid-Range to Sub-Seasonal Scales via Flow Matching</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://scholar.google.com/citations?user=2DSP8jUAAAAJ" target="_blank">Arsen Kuzhamuratov<sup>1,2,*</sup></a>,
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                <a href="" target="_blank">Mikhail Zhirnov<sup>1,2</sup></a>,
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                    <a href="https://scholar.google.com/citations?user=q0lIfCEAAAAJ" target="_blank">Andrey Kuznetsov<sup>1,2</sup></a>,
+                    <span class="author-block">
+                      <a href="https://scholar.google.com/citations?user=5kMqBQEAAAAJ" target="_blank">Ivan Oseledets<sup>1</sup></a>,
+                      <span class="author-block">
+                        <a href="https://scholar.google.com/citations?user=mVExMowAAAAJ" target="_blank">Konstantin Sobolev<sup>1,2</sup></a>
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
+                    <span class="author-block">AXXX<sup>1</sup>, FusionBrain Lab<sup>2</sup></span>
                     <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Corresponding Author</small></span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- TODO: Update with your arXiv paper ID -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
+                          <i class="ai ai-arxiv"></i>
                         </span>
                         <span>Paper</span>
                       </a>
                     </span>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/v-gen-ai/Marchuk" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -294,17 +194,6 @@
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -314,159 +203,155 @@
 </section>
 
 
+
+
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
+      <img
+        src="static/gifs/Q850Z850_10u_2t_2021-06-20T12_00_00.gif"
+        alt="Method Teaser"
+        class="teaser-gif"
+        loading="lazy"
+        decoding="async"
+      />
       <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      <h2 class="content has-text-justified">
+        We present <i>Marchuk</i>, a generative latent flow-matching model for global weather forecasting spanning mid-range to subseasonal timescales, with prediction horizons of up to 30 days.
       </h2>
     </div>
   </div>
 </section>
 <!-- End teaser video -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
+
+<!-- Method section -->
+<section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Method Overview</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+          
+          <div class="columns is-centered">
+            <div class="column is-full">
+              <img src="static/images/2_model2.png" alt="Method Overview"/>
+              <p class="has-text-centered is-size-6 mt-2">General Scheme of Marchuk.</p>
+            </div>
+          </div>
+
+          <div class="column is-full">
+            <ul>
+              <li>Marchuk operates in the latent space learned by the DC-AE model introduced in LaDCast;</li>
+              <li>Within this latent space, we train a flow-matching Diffusion Transformer (DiT) to model the conditional distribution of future weather fields given the current state;</li>
+              <li>Marchuk is conditioned on weather maps from the previous $K$ days and is provided with noised weather maps for the subsequent $N$ days as input;</li>
+              <div class="columns is-centered">
+                <div class="column is-full">
+                  <img src="static/images/3_architecture3.png" alt="Method Overview"/>
+                  <p class="has-text-centered is-size-6 mt-2">Architecture of Marchuk DiT.</p>
+                </div>
+              </div>
+              
+              <li>Key components of Marchuk DiT:</li>
+              <ul>
+                <li>Cross-DiT architecture;</li>
+                <li>Timestamp embeddings conditioning within the Cross-Attention blocks;</li>
+                <li>LoRA-based timestep modulation;</li>
+                <li>New strategy for positional embeddings: learnable 2-D spatial positional embeddings together with 1-D rotary positional embeddings (RoPE) applied along the temporal dimension.</li>
+            </ul>
+            </ul>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
-
 
 <!-- Image carousel -->
-<section class="hero is-small">
+<section class="section hero">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+      <div class="columns is-centered has-text-centered"></div>
+        <h2 class="title is-3">FLUX.1 [dev] Results</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- TODO: Replace with your research result images -->
+            <img src="static/images/tlora_flux_5.png" alt="First research result visualization" loading="lazy"/>
+            <!-- TODO: Replace with description of this result -->
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/tlora_flux_4.png" alt="Second research result visualization" loading="lazy"/>
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/tlora_flux_3.png" alt="Third research result visualization" loading="lazy"/>
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/tlora_flux_2.png" alt="Fourth research result visualization" loading="lazy"/>
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/tlora_flux_1.png" alt="Fifth research result visualization" loading="lazy"/>
+          </div>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <div class="columns is-centered">
+            <div class="column is-centered is-four-fifths">
+                  <img src="static/images/flux_results.png" alt="Flux comparison with LoRA"/>
+                  <p class="has-text-centered is-size-6 mt-2">CLIP IS and TS for LoRA, Vanilla T-LoRA, and T-LoRA across dfferent ranks.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End image carousel -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+<!-- Qualitative Results section -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">SD-XL Results</h2>
+
+        
+        <div class="content has-text-justified">
+
+          <div class="columns is-centered">
+            <div class="column is-full">
+              <img src="static/images/all_methods_arxiv.png" alt="Qualitative Comparison"/>
+              <p class="has-text-centered is-size-6 mt-2">Generation examples for T-LoRA alongside other diffusion model customization baselines.</p>
+              <img src="static/images/user_study.png" alt="User Study"/>
+              <p class="has-text-centered is-size-6 mt-2">User study: Pairwise comparison with T-LoRA.</p>
+              <img src="static/images/other_baselines.png" alt="baselines Comparison"/>
+              <p class="has-text-centered is-size-6 mt-2">Comparison with other baseline methods.</p>
+              <img src="static/images/vs_lora.png" alt="Comparison with LoRA"/>
+              <p class="has-text-centered is-size-6 mt-2">CLIP IS and TS for LoRA, Vanilla T-LoRA, and T-LoRA across dfferent ranks.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
 
 
 
 
 
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 
@@ -480,12 +365,11 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@article{soboleva2025t,
+  title={T-lora: Single image diffusion model customization without overfitting},
+  author={Soboleva, Vera and Alanov, Aibek and Kuznetsov, Andrey and Sobolev, Konstantin},
+  journal={arXiv preprint arXiv:2507.05964},
+  year={2025}
 }</code></pre>
     </div>
 </section>
