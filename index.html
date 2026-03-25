@@ -270,54 +270,6 @@
   </div>
 </section>
 
-<!-- Image carousel -->
-<section class="section hero">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered has-text-centered"></div>
-        <h2 class="title is-3">FLUX.1 [dev] Results</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <!-- TODO: Replace with your research result images -->
-            <img src="static/images/tlora_flux_5.png" alt="First research result visualization" loading="lazy"/>
-            <!-- TODO: Replace with description of this result -->
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/tlora_flux_4.png" alt="Second research result visualization" loading="lazy"/>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/tlora_flux_3.png" alt="Third research result visualization" loading="lazy"/>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/tlora_flux_2.png" alt="Fourth research result visualization" loading="lazy"/>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/tlora_flux_1.png" alt="Fifth research result visualization" loading="lazy"/>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <div class="content has-text-justified">
-          <div class="columns is-centered">
-            <div class="column is-centered is-four-fifths">
-                  <img src="static/images/flux_results.png" alt="Flux comparison with LoRA"/>
-                  <p class="has-text-centered is-size-6 mt-2">CLIP IS and TS for LoRA, Vanilla T-LoRA, and T-LoRA across dfferent ranks.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End image carousel -->
 
 
 <!-- Qualitative Results section -->
@@ -325,21 +277,30 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">SD-XL Results</h2>
+        <h2 class="title is-3">WeatherBench-2 Metrics</h2>
 
         
         <div class="content has-text-justified">
 
           <div class="columns is-centered">
             <div class="column is-full">
-              <img src="static/images/all_methods_arxiv.png" alt="Qualitative Comparison"/>
-              <p class="has-text-centered is-size-6 mt-2">Generation examples for T-LoRA alongside other diffusion model customization baselines.</p>
-              <img src="static/images/user_study.png" alt="User Study"/>
-              <p class="has-text-centered is-size-6 mt-2">User study: Pairwise comparison with T-LoRA.</p>
-              <img src="static/images/other_baselines.png" alt="baselines Comparison"/>
-              <p class="has-text-centered is-size-6 mt-2">Comparison with other baseline methods.</p>
-              <img src="static/images/vs_lora.png" alt="Comparison with LoRA"/>
-              <p class="has-text-centered is-size-6 mt-2">CLIP IS and TS for LoRA, Vanilla T-LoRA, and T-LoRA across dfferent ranks.</p>
+              <img src="static/images/rmse.png" alt="RMSE Comparison"/>
+              <p class="has-text-centered is-size-6 mt-2">RMSE comparison. We evaluate LaDCast and Marchuk on the WeatherBench-2 benchmark over a 30-day prediction horizon.</p>
+              <img src="static/images/crps.png" alt="CRPS Comparison"/>
+              <p class="has-text-centered is-size-6 mt-2">CRPS Ensemble Metrics Comparison. Figure illustrates the evolution of CRPS over a 30-day forecast horizon. </p>
+              <img src="static/images/inferencespeed.png" alt="Inference Speed"/>
+              <p class="has-text-centered is-size-6 mt-2">Inference speed: the model performs predictions entirely in the latent space for a 30-day forecast horizon
+with an ensemble size of 50, executed on an H100 GPU</p>
+              <img src="static/images/rmse30.png" alt="Table RMSE 30 days"/>
+              <p class="has-text-centered is-size-6 mt-2">RMSE metrics at 30-day forecast horizons. The evaluated variables
+include atmospheric fields – UW500 (u-component of wind at 500 hPa), T500 (temperature at 500 hPa), G500
+(geopotential at 500 hPa), and SH500 (specific humidity at 500 hPa) – as well as surface fields – SLP (sea level
+pressure), 10m-UW and 10m-VW (u- and v-components of wind at 10 meters), and T2M (temperature at 2 meters).</p>
+              <img src="static/images/crps30.png" alt="Table CRPS 30 days"/>
+              <p class="has-text-centered is-size-6 mt-2">CRPS metrics at 30-day forecast horizons. The evaluated variables
+include atmospheric fields – UW500 (u-component of wind at 500 hPa), T500 (temperature at 500 hPa), G500
+(geopotential at 500 hPa), and SH500 (specific humidity at 500 hPa) – and surface fields – SLP (sea level pressure), 10mUW (u-component of wind at 10 meters), T2M (temperature at 2 meters), and TP-6h (total accumulated precipitation
+over the last 6 hours).</p>
             </div>
           </div>
         </div>
@@ -365,11 +326,11 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{soboleva2025t,
-  title={T-lora: Single image diffusion model customization without overfitting},
-  author={Soboleva, Vera and Alanov, Aibek and Kuznetsov, Andrey and Sobolev, Konstantin},
-  journal={arXiv preprint arXiv:2507.05964},
-  year={2025}
+      <pre id="bibtex-code"><code>@article{marchuk2026,
+  title={Marchuk: Efficient Global Weather Forecasting from Mid-Range to Sub-Seasonal Scales via Flow Matching},
+  author={Arsen Kuzhamuratov, Mikhail Zhirnov, Andrey Kuznetsov, Ivan Oseledets, Konstantin Sobolev},
+  journal={arXiv preprint arXiv:},
+  year={2026}
 }</code></pre>
     </div>
 </section>
