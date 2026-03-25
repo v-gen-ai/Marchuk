@@ -168,7 +168,7 @@
                     <!-- TODO: Replace with your institution and conference/journal info -->
                     <span class="author-block">AXXX<sup>1</sup>, FusionBrain Lab<sup>2</sup></span>
                     <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Corresponding Author</small></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>kuzhamuratov@fusionbrainlab.com</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -210,6 +210,10 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- TODO: Replace with your teaser video -->
+      <!-- TODO: Replace with your video description -->
+      <h2 class="content has-text-justified">
+        We present <i>Marchuk</i>, a generative latent flow-matching model for global weather forecasting spanning mid-range to subseasonal timescales, with prediction horizons of up to 30 days.
+      </h2>
       <img
         src="static/gifs/Q850Z850_10u_2t_2021-06-20T12_00_00.gif"
         alt="Method Teaser"
@@ -217,9 +221,9 @@
         loading="lazy"
         decoding="async"
       />
-      <!-- TODO: Replace with your video description -->
       <h2 class="content has-text-justified">
-        We present <i>Marchuk</i>, a generative latent flow-matching model for global weather forecasting spanning mid-range to subseasonal timescales, with prediction horizons of up to 30 days.
+      <i>q850 (Specific Humidity at 850 hPa), z850 (Geopotential at 850 hPa), 10u (10 meter u wind component), and 2t (2 meter temperature)
+       6h forecasts initialized 2021-06-20T12.</i>
       </h2>
     </div>
   </div>
@@ -246,7 +250,7 @@
             <ul>
               <li>Marchuk operates in the latent space learned by the DC-AE model introduced in LaDCast;</li>
               <li>Within this latent space, we train a flow-matching Diffusion Transformer (DiT) to model the conditional distribution of future weather fields given the current state;</li>
-              <li>Marchuk is conditioned on weather maps from the previous $K$ days and is provided with noised weather maps for the subsequent $N$ days as input;</li>
+              <li>Marchuk is conditioned on weather maps from the previous <i>K</i> days and is provided with noised weather maps for the subsequent <i>N</i> days as input;</li>
               <div class="columns is-centered">
                 <div class="column is-full">
                   <img src="static/images/3_architecture3.png" alt="Method Overview"/>
@@ -278,19 +282,24 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">WeatherBench-2 Metrics</h2>
+        <h2 class="content has-text-justified">
+        The 276M-parameter Marchuk model consistently outperforms the LaDCast 375M baseline
+      across the evaluated metrics and attains performance comparable to the much larger LaDCast 1.6B model.
+      The 276M variant of Marchuk achieves an approximately 6x speedup relative to LaDCast 1.6B while
+maintaining similar quantitative accuracy.
+      </h2>
 
-        
         <div class="content has-text-justified">
-
           <div class="columns is-centered">
             <div class="column is-full">
+              <img src="static/images/inferencespeed.png" alt="Inference Speed"/>
+              <p class="has-text-centered is-size-6 mt-2">Inference speed: the model performs predictions entirely in the latent space for a 30-day forecast horizon
+with an ensemble size of 50, executed on an H100 GPU.</p>
               <img src="static/images/rmse.png" alt="RMSE Comparison"/>
               <p class="has-text-centered is-size-6 mt-2">RMSE comparison. We evaluate LaDCast and Marchuk on the WeatherBench-2 benchmark over a 30-day prediction horizon.</p>
               <img src="static/images/crps.png" alt="CRPS Comparison"/>
               <p class="has-text-centered is-size-6 mt-2">CRPS Ensemble Metrics Comparison. Figure illustrates the evolution of CRPS over a 30-day forecast horizon. </p>
-              <img src="static/images/inferencespeed.png" alt="Inference Speed"/>
-              <p class="has-text-centered is-size-6 mt-2">Inference speed: the model performs predictions entirely in the latent space for a 30-day forecast horizon
-with an ensemble size of 50, executed on an H100 GPU</p>
+
               <img src="static/images/rmse30.png" alt="Table RMSE 30 days"/>
               <p class="has-text-centered is-size-6 mt-2">RMSE metrics at 30-day forecast horizons. The evaluated variables
 include atmospheric fields – UW500 (u-component of wind at 500 hPa), T500 (temperature at 500 hPa), G500
