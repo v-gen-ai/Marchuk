@@ -4,7 +4,7 @@
 <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/arXiv-2603.77777-b31b1b.svg" height=22.5></a>
 <a href="https://v-gen-ai.github.io/Marchuk/"><img src="https://img.shields.io/badge/Project-Website-blue" height=22.5><a>
 <a href="https://"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>
-<a href="https://huggingface.co/v-gen-ai/Marchu"><img src="https://img.shields.io/badge/%E2%80%8B-Hugging%20Face-FFD21E?logo=huggingface&logoColor=FFD21E" height=22.5></a>
+<a href="https://huggingface.co/v-gen-ai/Marchuk"><img src="https://img.shields.io/badge/%E2%80%8B-Hugging%20Face-FFD21E?logo=huggingface&logoColor=FFD21E" height=22.5></a>
 <a href="https://github.com/v-gen-ai/Marchuk/blob/main/LICENSE"><img src="https://img.shields.io/github/license/AIRI-Institute/al_toolbox" height=22.5></a>
 
 
@@ -35,11 +35,10 @@ conda activate marchuk
 git clone https://github.com/tonyzyl/ladcast.git
 pip install -e ladcast
 ```
-Download Marchuk weights from [huggingface.co/v-gen-ai/Marchuk](https://huggingface.co/v-gen-ai/Marchuk).
 
 ## Evaluation script
 
-See `inference.ipynb` to run Marchuk model.
+Run `inference.ipynb` to evaluate Marchuk model on single timestamp.
 
 ## BibTeX
 ```
