@@ -1,0 +1,8 @@
+*.ipynb_checkpoints/
+checkpoint/
+*__pycache__/
+**/__pycache__/
+weights/
+ladcast/
+tmp_frames/
+ladcast/
