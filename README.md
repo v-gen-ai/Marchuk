@@ -1,3 +1,12 @@
+# Marchuk: Efficient Global Weather Forecasting from Mid-Range to Sub-Seasonal Scales via Flow Matching
+
+
+<a href="https://arxiv.org/"><img src="https://img.shields.io/badge/arXiv-2509.25631-b31b1b.svg" height=22.5></a>
+<a href="https://controlgenai.github.io/T-LoRA/"><img src="https://img.shields.io/badge/Project-Website-blue" height=22.5><a>
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
+[![Model on HF](https://img.shields.io/badge/%E2%80%8B-Hugging%20Face-FFD21E?logo=huggingface&logoColor=FFD21E)](https://huggingface.co/tonyzyl/ladcast/tree/main/V0.1.X/DCAE)
+[![License](https://img.shields.io/github/license/AIRI-Institute/al_toolbox)](./LICENSE)
+
 <p align="center">
   <img src="specific_humidity.gif" alt="q700-gif" width="500"><br>
   <em>Q700 6h forecast initialized 2021-12-01</em>
@@ -8,16 +17,14 @@ Accurate subseasonal weather forecasting remains a major challenge due to the in
 nature of the atmosphere, which limits the predictive skill of conventional models beyond the mid-
 range horizon (approximately 15 days). In this work, we present Marchuk, a generative latent
 flow-matching model for global weather forecasting spanning mid-range to subseasonal timescales,
-with prediction horizons of up to 30 days. Marchuk is a flow-matching latent diffusion model that
-conditions on current-day weather maps and autoregressively predicts subsequent days’ weather
-maps within the learned latent space. We replace rotary positional encodings (RoPE) with train-
-able positional embeddings and extend the temporal context window, which together enhance the
-model’s ability to represent and propagate long-range temporal dependencies during latent fore-
-casting. Marchuk offers two key advantages: high computational efficiency and strong predictive
-performance. Despite its compact architecture of only 276 million parameters, the model achieves
-performance comparable to LaDCast, a substantially larger model with 1.6 billion parameters, while
-operating at significantly higher inference speeds.
-
+with prediction horizons of up to 30 days. Marchuk conditions on current-day weather maps
+and autoregressively predicts subsequent days’ weather maps within the learned latent space. We
+replace rotary positional encodings (RoPE) with trainable positional embeddings and extend the
+temporal context window, which together enhance the model’s ability to represent and propagate
+long-range temporal dependencies during latent forecasting. Marchuk offers two key advantages:
+high computational efficiency and strong predictive performance. Despite its compact architecture of
+only 276 million parameters, the model achieves performance comparable to LaDCast, a substantially
+larger model with 1.6 billion parameters, while operating at significantly higher inference speeds.
 
 ## Installation
 
@@ -27,7 +34,7 @@ conda activate marchuk
 git clone https://github.com/tonyzyl/ladcast.git
 pip install -e ladcast
 ```
-Download Marchuk weights from [here](https://drive.google.com/file/d/15K_gRGpADh7Pcp1J1hE8tu5b0HBlYh5Y/view?usp=sharing).
+Download Marchuk weights from [huggingface.co/v-gen-ai/Marchuk](https://huggingface.co/v-gen-ai/Marchuk).
 
 ## Evaluation script
 
@@ -35,13 +42,10 @@ See `inference.ipynb` to run Marchuk model.
 
 ## BibTeX
 ```
-@misc{marchuk2025,
-  title         = {Marchuk: Efficient Global Weather Forecasting from Mid-Range to Sub-Seasonal Scales via Flow Matching},
-  author        = {},
-  year          = {2026},
-  eprint        = {},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.LG},
-  url           = {https://arxiv.org/abs/}
+@article{marchuk2026,
+  title={Marchuk: Efficient Global Weather Forecasting from Mid-Range to Sub-Seasonal Scales via Flow Matching},
+  author={Arsen Kuzhamuratov, Mikhail Zhirnov, Andrey Kuznetsov, Ivan Oseledets, Konstantin Sobolev},
+  journal={arXiv preprint arXiv:},
+  year={2026}
 }
 ```
