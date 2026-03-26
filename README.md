@@ -1,7 +1,7 @@
 # Marchuk: Efficient Global Weather Forecasting from Mid-Range to Sub-Seasonal Scales via Flow Matching
 
 
-<a href="https://arxiv.org/"><img src="https://img.shields.io/badge/arXiv-2603.77777-b31b1b.svg" height=22.5></a>
+<a href="https://arxiv.org/abs/2603.24428"><img src="https://img.shields.io/badge/arXiv-2603.77777-b31b1b.svg" height=22.5></a>
 <a href="https://v-gen-ai.github.io/Marchuk/"><img src="https://img.shields.io/badge/Project-Website-blue" height=22.5><a>
 <a href="https://colab.research.google.com/drive/1f1q14U4b9fJwQRYrFGvEpQt6JOE_1nmX?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>
 <a href="https://huggingface.co/v-gen-ai/Marchuk"><img src="https://img.shields.io/badge/%E2%80%8B-Hugging%20Face-FFD21E?logo=huggingface&logoColor=FFD21E" height=22.5></a>
