@@ -40,6 +40,9 @@ pip install -e ladcast
 Run `inference.ipynb` to evaluate Marchuk model on single timestamp.
 
 ## BibTeX
+
+Please cite our paper if this code contributes to your research:
+
 ```
 @misc{kuzhamuratov2026marchukefficientglobalweather,
       title={Marchuk: Efficient Global Weather Forecasting from Mid-Range to Sub-Seasonal Scales via Flow Matching}, 
