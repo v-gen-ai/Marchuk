@@ -41,10 +41,13 @@ Run `inference.ipynb` to evaluate Marchuk model on single timestamp.
 
 ## BibTeX
 ```
-@article{marchuk2026,
-  title={Marchuk: Efficient Global Weather Forecasting from Mid-Range to Sub-Seasonal Scales via Flow Matching},
-  author={Arsen Kuzhamuratov, Mikhail Zhirnov, Andrey Kuznetsov, Ivan Oseledets, Konstantin Sobolev},
-  journal={arXiv preprint arXiv:},
-  year={2026}
+@misc{kuzhamuratov2026marchukefficientglobalweather,
+      title={Marchuk: Efficient Global Weather Forecasting from Mid-Range to Sub-Seasonal Scales via Flow Matching}, 
+      author={Arsen Kuzhamuratov and Mikhail Zhirnov and Andrey Kuznetsov and Ivan Oseledets and Konstantin Sobolev},
+      year={2026},
+      eprint={2603.24428},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2603.24428}, 
 }
 ```
