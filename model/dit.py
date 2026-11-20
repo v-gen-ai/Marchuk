@@ -124,13 +124,18 @@ class DiffusionTransformer3D(nn.Module):
         model_dim=2048,
         ff_dim=5120,
         num_blocks=8,
-        axes_dims=(16, 24, 24)
+        axes_dims=(16, 24, 24),
+        # v1 attends inside one frame in the first block. v1.5 uses the full clip in both.
+        local_attn_group_size=(1, -1, -1),
+        global_attn_group_size=(-1, -1, -1),
     ):
         super().__init__()
         head_dim = sum(axes_dims)
         self.model_dim = model_dim
         self.num_blocks = num_blocks
         self.patch_size = patch_size
+        local_attn_group_size = tuple(local_attn_group_size)
+        global_attn_group_size = tuple(global_attn_group_size)
 
         self.time_embeddings = TimeEmbeddings(model_dim)
 
@@ -139,8 +144,8 @@ class DiffusionTransformer3D(nn.Module):
 
         self.transformer_blocks = nn.ModuleList([
             nn.ModuleList([
-                TransformerBlock(model_dim, ff_dim, head_dim, (1, -1, -1), 'local'),
-                TransformerBlock(model_dim, ff_dim, head_dim, (-1, -1, -1), 'local'),
+                TransformerBlock(model_dim, ff_dim, head_dim, local_attn_group_size, 'local'),
+                TransformerBlock(model_dim, ff_dim, head_dim, global_attn_group_size, 'local'),
             ]) for _ in range(num_blocks)
         ])
 

@@ -39,6 +39,7 @@ pip install -e ladcast
 
 Run `inference.ipynb` to evaluate Marchuk model on single timestamp.
 
+[NEW] `inference-v1_5.ipynb` evaluation script of Marchuk-v1.5. 
 ## BibTeX
 
 Please cite our paper if this code contributes to your research:

@@ -1,0 +1,11 @@
+model:
+  dit_params:
+    in_visual_dim: 84
+    out_visual_dim: 84
+    patch_size: [ 1, 1, 1 ]
+    model_dim: 640
+    ff_dim: 2560
+    num_blocks: 16
+    axes_dims: [ 16, 24, 24 ]
+    local_attn_group_size: [ -1, -1, -1 ]
+    global_attn_group_size: [ -1, -1, -1 ]

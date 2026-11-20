@@ -6,3 +6,6 @@ weights/
 ladcast/
 tmp_frames/
 ladcast/
+weather*
+rmse*
+compare*
